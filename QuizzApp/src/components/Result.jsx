@@ -5,7 +5,7 @@ const Result = ({score}) => {
     <div>
       <h2>Your score is : {score}</h2>
     </div>
-  )
+  )  
 }
 
 export default Result
