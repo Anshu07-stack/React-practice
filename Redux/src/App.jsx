@@ -1,14 +1,18 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
-
+import {useSelector,useDispatch} from 'react-redux'
+import { addToProduct } from './reduxx/action/productAction'
 function App() {
-  const [count, setCount] = useState(0)
+  const dispatch = useDispatch()
+  const state = useSelector((state)=>{
+    return state
+  })
+  console.log(state)
 
   return (
    <>
       <div className='bg-red-500'>hello</div>
+      <button onClick={()=>dispatch(addToProduct())}>click</button>
    </>
   )
 }
