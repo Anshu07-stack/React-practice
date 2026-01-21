@@ -5,7 +5,7 @@ import { cartReducer } from '../reducer/cartReducer';
 const rootReducer = combineReducers({
     productReducer,
     cartReducer
-})
+}) 
 const store = createStore(
     rootReducer,
     compose(
