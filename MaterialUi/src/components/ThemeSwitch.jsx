@@ -63,10 +63,11 @@ const MaterialUISwitch = styled(Switch)(({ theme }) => ({
 
 
 
-export default function ThemeSwitch({setLightMode}) {
+export default function ThemeSwitch({lightMode,setLightMode}) {
   return (
     <FormGroup>
       <FormControlLabel
+      checked={!lightMode}
         control={<MaterialUISwitch sx={{ m: 1 }} defaultChecked  />}
         onClick={()=>setLightMode(prev=>!prev)}
         label="MUI switch"

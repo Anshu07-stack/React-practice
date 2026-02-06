@@ -14,7 +14,7 @@ import ThemeSwitch from './components/ThemeSwitch'
 
 function App() {
 
-  const [lightMode,setLightMode] = useState(false)
+  const [lightMode,setLightMode] = useState(true)
     const theme = createTheme({
   palette: {
    mode: lightMode ? 'light' : 'dark'
@@ -25,7 +25,7 @@ function App() {
      <ThemeProvider theme={theme}>
       <CssBaseline/>
       <Navbar/>
-      <ThemeSwitch setLightMode={setLightMode}/>
+      <ThemeSwitch lightMode={lightMode} setLightMode={setLightMode}/>
     <Buttons/>
     <UploadFile/>
     <SearchBar/>
