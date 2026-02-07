@@ -1,31 +1,25 @@
-import './App.css'
-import Button from '@mui/material/Button';
-import DeleteIcon from '@mui/icons-material/Delete';
-import { styled } from '@mui/material/styles';
-import Typography from '@mui/material/Typography';
+import Stack from "@mui/material/Stack";
+import "./App.css";
+import Navbar from "./components/Navbar";
+import Sidebar from "./components/Sidebar";
+import Feed from "./components/Feed";
+import RightBar from "./components/RightBar";
+import Box from "@mui/material/Box";
 
 function App() {
-
-  const MyButton = styled(Button)({
-    backgroundColor:''
-  })
-
   return (
- <>
-  <Button variant="contained" color='secondary' sx={{
-    bgcolor:'secondary',
-    '&:hover': {
-     bgcolor:'blue'
-    }
-  }}
-   startIcon={<DeleteIcon/>}
-  >Contained</Button>
-  <MyButton>hello</MyButton>
-  <Typography variant='h2'>
-    hello world
-  </Typography>
- </>
-  )
+    <>
+    {/* <Box  position={'sticky'} top={0}> */}
+      <Navbar />
+    {/* </Box> */}
+      
+      <Stack direction={'row'} justifyContent={'space-between'} spacing={1}>
+        <Sidebar/>
+        <Feed/>
+        <RightBar/>
+      </Stack>
+    </>
+  );
 }
 
-export default App
+export default App;
